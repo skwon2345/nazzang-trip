@@ -36,7 +36,7 @@ const schedule: DayPlan[] = [
         title: "인천공항 출발",
         desc: "제주항공/비엣젯 직항 (약 5시간 30분)",
         icon: "🛫",
-        tip: "기내에서 잠을 자두세요!",
+        tip: "석곰이는 기내에서 잠을 자두세요! 나연공주도!",
       },
       {
         time: "05:20",
@@ -72,7 +72,7 @@ const schedule: DayPlan[] = [
       {
         time: "14:00",
         title: "낮잠 & 휴식",
-        desc: "비행 피로 회복! 충분히 쉬어주세요",
+        desc: "비행 피로 회복! 곰돌이도 공주도 충분히 쉬어주세요",
         icon: "😴",
       },
       {
@@ -128,7 +128,7 @@ const schedule: DayPlan[] = [
         title: "커플 스파",
         desc: "리조트 스파에서 커플 마사지 (베트남식 or 아로마)",
         icon: "💆",
-        tip: "사전 예약 필수! 커플룸으로 예약하세요",
+        tip: "사전 예약 필수! 석곰이와 나연공주 커플룸으로 예약하세요",
       },
       {
         time: "15:30",
@@ -152,7 +152,7 @@ const schedule: DayPlan[] = [
       {
         time: "21:00",
         title: "별 보며 해변 산책",
-        desc: "리조트 해변에서 둘만의 시간",
+        desc: "리조트 해변에서 석곰이와 나연공주 둘만의 시간",
         icon: "⭐",
       },
     ],
@@ -195,7 +195,7 @@ const schedule: DayPlan[] = [
       {
         time: "07:00",
         title: "사막 포토타임",
-        desc: "모래언덕 위에서 커플 사진 촬영",
+        desc: "모래언덕 위에서 석곰이 & 나연공주 커플 사진 촬영",
         icon: "📸",
       },
       {
@@ -311,7 +311,7 @@ const schedule: DayPlan[] = [
       {
         time: "08:00",
         title: "마지막 조식",
-        desc: "리조트에서의 마지막 아침. 여유롭게 즐기기",
+        desc: "곰돌이와 공주의 리조트 마지막 아침. 여유롭게 즐기기",
         icon: "🌞",
       },
       {
@@ -362,7 +362,7 @@ const schedule: DayPlan[] = [
       {
         time: "22:45",
         title: "나트랑 출발",
-        desc: "캄란공항에서 인천으로! 안녕 나트랑 💕",
+        desc: "캄란공항에서 인천으로! 안녕 나트랑~ 석곰이와 나연공주 또 올게 🐻💕👸",
         icon: "🛫",
       },
     ],
@@ -382,7 +382,7 @@ const restaurants: Restaurant[] = [
   {
     name: "Lanterns Restaurant",
     category: "베트남 정통",
-    desc: "분위기 좋은 정원식 베트남 레스토랑. 커플에게 인기!",
+    desc: "분위기 좋은 정원식 베트남 레스토랑. 석곰이 & 나연공주 같은 커플에게 인기!",
     price: "₩15,000~25,000",
     mustTry: "반미, 스프링롤, 쌀국수",
     icon: "🏮",
@@ -535,6 +535,11 @@ const packingList: PackingItem[] = [
     items: ["현금 (VND, 50만원 정도)", "그랩(Grab) 앱 설치", "구글맵 오프라인 저장", "방수팩", "비닐백 (젖은옷용)"],
     icon: "🎒",
   },
+  {
+    category: "석곰이 & 나연공주 필수템",
+    items: ["커플 셀카봉", "커플 슬리퍼/비치웨어", "곰돌이 인형 (여행메이트)", "티아라/왕관 머리띠 (인생샷용)", "서로에게 쓴 편지"],
+    icon: "🐻👸",
+  },
 ];
 
 /* ─────────────────────── components ─────────────────────── */
@@ -552,8 +557,9 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-lg font-bold text-rose-600 no-underline">
-          <span className="text-2xl animate-pulse-heart">💕</span>
-          <span>나트랑 여행</span>
+          <span className="text-xl">🐻</span>
+          <span>석곰이 & 나연공주</span>
+          <span className="text-xl">👸</span>
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
@@ -595,17 +601,41 @@ function Header() {
 function Hero() {
   return (
     <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Decorative elements */}
+      {/* Decorative elements - bear & princess themed */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-float">🌴</div>
-        <div className="absolute top-40 right-16 text-5xl opacity-20 animate-float delay-200">✈️</div>
+        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-float">🐻</div>
+        <div className="absolute top-40 right-16 text-5xl opacity-20 animate-float delay-200">👸</div>
         <div className="absolute bottom-32 left-20 text-5xl opacity-20 animate-float delay-300">🐚</div>
         <div className="absolute bottom-20 right-10 text-6xl opacity-20 animate-float delay-100">🌊</div>
-        <div className="absolute top-60 left-1/2 text-4xl opacity-15 animate-float delay-500">☀️</div>
+        <div className="absolute top-60 left-1/2 text-4xl opacity-15 animate-float delay-500">👑</div>
+        <div className="absolute bottom-48 right-1/3 text-5xl opacity-15 animate-float delay-400">🧸</div>
+        <div className="absolute top-32 left-1/3 text-4xl opacity-15 animate-float delay-100">🏰</div>
       </div>
 
       <div className="text-center px-4 relative z-10">
         <div className="animate-fade-in-up">
+          {/* Couple Profile */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div className="text-center">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-4xl md:text-5xl shadow-lg border-4 border-white">
+                🐻
+              </div>
+              <p className="mt-2 font-bold text-gray-700 text-lg">석곰이</p>
+              <p className="text-xs text-gray-400">석권</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-3xl animate-pulse-heart">💕</span>
+              <span className="text-xs text-rose-400 font-medium">with</span>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center text-4xl md:text-5xl shadow-lg border-4 border-white">
+                👸
+              </div>
+              <p className="mt-2 font-bold text-gray-700 text-lg">나연공주</p>
+              <p className="text-xs text-gray-400">나연</p>
+            </div>
+          </div>
+
           <p className="text-rose-400 text-lg mb-2 font-medium">2025. 03. 03 — 03. 07</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             <span className="gradient-text">나트랑</span>
@@ -613,7 +643,7 @@ function Hero() {
           <p className="text-3xl md:text-4xl font-light text-gray-700 mb-2">Nha Trang, Vietnam</p>
           <div className="flex items-center justify-center gap-3 my-6">
             <span className="h-px w-16 bg-rose-300"></span>
-            <span className="text-2xl animate-pulse-heart">💕</span>
+            <span className="text-sm text-rose-400 font-medium">석곰이와 나연공주의 달콤한 여행</span>
             <span className="h-px w-16 bg-rose-300"></span>
           </div>
           <p className="text-xl text-gray-500 mb-2">아나만다라 캄란 리조트</p>
@@ -638,7 +668,7 @@ function Hero() {
         <div className="animate-fade-in-up delay-500 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
           {[
             { label: "4박 5일", icon: "📅" },
-            { label: "커플 여행", icon: "💑" },
+            { label: "석곰이 & 공주", icon: "🐻👸" },
             { label: "리조트", icon: "🏖️" },
             { label: "사막 일출", icon: "🌅" },
           ].map((item) => (
@@ -665,8 +695,9 @@ function TripOverview() {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">여행 개요</h2>
-        <div className="section-divider mb-10"></div>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">🐻 석곰이 & 나연공주의 여행 🏰</h2>
+        <div className="section-divider mb-6"></div>
+        <p className="text-gray-500 mb-10">곰돌이 석권이와 공주님 나연이의 첫 베트남 모험!</p>
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-6">
@@ -759,9 +790,9 @@ function Schedule() {
     <section id="schedule" className="py-20 px-4 bg-gradient-to-b from-white to-rose-50/30">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">일정표</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">🗓️ 우리의 일정표</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">5일간의 알찬 나트랑 여행 일정</p>
+          <p className="text-gray-500">석곰이와 나연공주의 5일간 나트랑 대모험 🐻👸</p>
         </div>
 
         <div className="space-y-6">
@@ -779,9 +810,9 @@ function Restaurants() {
     <section id="restaurants" className="py-20 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">맛집 리스트</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">🍽️ 맛집 리스트</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">나트랑에서 꼭 가봐야 할 맛집들</p>
+          <p className="text-gray-500">석곰이가 많이 먹고 나연공주가 맛있게 먹을 곳들 🐻🍯👸</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -827,9 +858,9 @@ function Places() {
     <section id="places" className="py-20 px-4 bg-gradient-to-b from-white to-cyan-50/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">관광지 & 볼거리</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">📍 관광지 & 볼거리</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">나트랑의 매력을 느낄 수 있는 곳들</p>
+          <p className="text-gray-500">곰돌이와 공주가 함께 탐험할 곳들 🐻👸</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -863,9 +894,9 @@ function Packing() {
     <section id="packing" className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">준비물 체크리스트</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">🎒 준비물 체크리스트</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">빠뜨리지 말고 챙기세요!</p>
+          <p className="text-gray-500">석곰이도 나연공주도 빠뜨리지 말고 챙기세요!</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -899,8 +930,9 @@ function UsefulInfo() {
     <section className="py-20 px-4 bg-gradient-to-b from-white to-amber-50/30">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">알아두면 좋은 정보</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">💡 알아두면 좋은 정보</h2>
           <div className="section-divider mb-4"></div>
+          <p className="text-gray-500 mb-6">석곰이와 나연공주의 안전하고 즐거운 여행을 위해!</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -963,18 +995,26 @@ function UsefulInfo() {
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-rose-500 to-pink-500 text-white py-12 px-4">
+    <footer className="bg-gradient-to-r from-rose-500 to-pink-500 text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="text-4xl mb-4 animate-pulse-heart">💕</div>
-        <h3 className="text-2xl font-bold mb-2">우리의 나트랑 여행</h3>
-        <p className="text-rose-100 mb-6">2025. 03. 03 — 03. 07</p>
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <span className="text-5xl">🐻</span>
+          <span className="text-4xl animate-pulse-heart">💕</span>
+          <span className="text-5xl">👸</span>
+        </div>
+        <h3 className="text-2xl font-bold mb-2">석곰이 & 나연공주의 나트랑 여행</h3>
+        <p className="text-rose-100 mb-2">석권이와 나연이의 달콤한 모험</p>
+        <p className="text-rose-200 text-sm mb-6">2025. 03. 03 — 03. 07</p>
         <div className="flex items-center justify-center gap-3 mb-6">
           <span className="h-px w-20 bg-rose-300"></span>
-          <span className="text-lg">✈️ 🏖️ 🌅 🏜️ 💑</span>
+          <span className="text-lg">🧸 ✈️ 🏖️ 🌅 🏜️ 👑</span>
           <span className="h-px w-20 bg-rose-300"></span>
         </div>
-        <p className="text-sm text-rose-200">
-          행복한 여행이 되길 바라며 ♥
+        <p className="text-sm text-rose-200 mb-2">
+          곰돌이와 공주의 행복한 여행이 되길 바라며
+        </p>
+        <p className="text-xs text-rose-300">
+          사랑해 나연아 🐻💕👸
         </p>
       </div>
     </footer>
