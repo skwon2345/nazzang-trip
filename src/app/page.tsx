@@ -36,7 +36,7 @@ const schedule: DayPlan[] = [
         title: "인천공항 출발",
         desc: "제주항공/비엣젯 직항 (약 5시간 30분)",
         icon: "🛫",
-        tip: "퀸나연는 기내에서 잠을 자두세요! 석곰이도!",
+        tip: "퀸나연은 기내에서 잠을 자두세요! 석곰이도!",
       },
       {
         time: "05:20",
@@ -72,7 +72,7 @@ const schedule: DayPlan[] = [
       {
         time: "14:00",
         title: "낮잠 & 휴식",
-        desc: "비행 피로 회복! 퀸도 곰돌이도 충분히 쉬어주세요",
+        desc: "비행 피로 회복! 퀸나연도 곰돌이도 충분히 쉬어주세요",
         icon: "😴",
       },
       {
@@ -128,7 +128,7 @@ const schedule: DayPlan[] = [
         title: "커플 스파",
         desc: "리조트 스파에서 커플 마사지 (베트남식 or 아로마)",
         icon: "💆",
-        tip: "사전 예약 필수! 퀸나연와 석곰이 커플룸으로 예약하세요",
+        tip: "사전 예약 필수! 퀸나연과 석곰이 커플룸으로 예약하세요",
       },
       {
         time: "15:30",
@@ -152,7 +152,7 @@ const schedule: DayPlan[] = [
       {
         time: "21:00",
         title: "별 보며 해변 산책",
-        desc: "리조트 해변에서 퀸나연와 석곰이 둘만의 시간",
+        desc: "리조트 해변에서 퀸나연과 석곰이 둘만의 시간",
         icon: "⭐",
       },
     ],
@@ -311,7 +311,7 @@ const schedule: DayPlan[] = [
       {
         time: "08:00",
         title: "마지막 조식",
-        desc: "퀸과 곰돌이의 리조트 마지막 아침. 여유롭게 즐기기",
+        desc: "퀸나연과 곰돌이의 리조트 마지막 아침. 여유롭게 즐기기",
         icon: "🌞",
       },
       {
@@ -362,7 +362,7 @@ const schedule: DayPlan[] = [
       {
         time: "22:45",
         title: "나트랑 출발",
-        desc: "캄란공항에서 인천으로! 안녕 나트랑~ 퀸나연와 석곰이 또 올게 👑💕🐻",
+        desc: "캄란공항에서 인천으로! 안녕 나트랑~ 퀸나연과 석곰이 또 올게 👑💕🐻",
         icon: "🛫",
       },
     ],
@@ -643,7 +643,7 @@ function Hero() {
           <p className="text-3xl md:text-4xl font-light text-gray-700 mb-2">Nha Trang, Vietnam</p>
           <div className="flex items-center justify-center gap-3 my-6">
             <span className="h-px w-16 bg-rose-300"></span>
-            <span className="text-sm text-rose-400 font-medium">퀸나연와 석곰이의 달콤한 여행</span>
+            <span className="text-sm text-rose-400 font-medium">퀸나연과 석곰이의 달콤한 여행</span>
             <span className="h-px w-16 bg-rose-300"></span>
           </div>
           <p className="text-xl text-gray-500 mb-2">아나만다라 캄란 리조트</p>
@@ -697,7 +697,7 @@ function TripOverview() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">👑 퀸나연 & 석곰이의 여행 🐻</h2>
         <div className="section-divider mb-6"></div>
-        <p className="text-gray-500 mb-10">퀸 나연이와 곰돌이 석권이의 첫 베트남 모험!</p>
+        <p className="text-gray-500 mb-10">퀸나연이와 곰돌이 석권이의 첫 베트남 모험!</p>
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-6">
@@ -792,7 +792,7 @@ function Schedule() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">🗓️ 우리의 일정표</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">퀸나연와 석곰이의 5일간 나트랑 대모험 👑🐻</p>
+          <p className="text-gray-500">퀸나연과 석곰이의 5일간 나트랑 대모험 👑🐻</p>
         </div>
 
         <div className="space-y-6">
@@ -812,7 +812,7 @@ function Restaurants() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">🍽️ 맛집 리스트</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">퀸나연가 맛있게 먹고 석곰이가 많이 먹을 곳들 👑🍯🐻</p>
+          <p className="text-gray-500">퀸나연이 맛있게 먹고 석곰이가 많이 먹을 곳들 👑🍯🐻</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -860,7 +860,7 @@ function Places() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">📍 관광지 & 볼거리</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500">퀸과 곰돌이가 함께 탐험할 곳들 👑🐻</p>
+          <p className="text-gray-500">퀸나연과 곰돌이가 함께 탐험할 곳들 👑🐻</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -932,7 +932,7 @@ function UsefulInfo() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">💡 알아두면 좋은 정보</h2>
           <div className="section-divider mb-4"></div>
-          <p className="text-gray-500 mb-6">퀸나연와 석곰이의 안전하고 즐거운 여행을 위해!</p>
+          <p className="text-gray-500 mb-6">퀸나연과 석곰이의 안전하고 즐거운 여행을 위해!</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -1011,7 +1011,7 @@ function Footer() {
           <span className="h-px w-20 bg-rose-300"></span>
         </div>
         <p className="text-sm text-rose-200 mb-2">
-          퀸과 곰돌이의 행복한 여행이 되길 바라며
+          퀸나연과 곰돌이의 행복한 여행이 되길 바라며
         </p>
         <p className="text-xs text-rose-300">
           사랑해 나연아 👑💕🐻
