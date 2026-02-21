@@ -136,3 +136,17 @@ body {
   height: 2px;
   background: linear-gradient(to right, transparent, #fda4af, transparent);
 }
+
+/* Leaflet custom marker */
+.numbered-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px !important;
+}

@@ -1,6 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
+import type { MapLocation } from "./components/DayMap";
+
+const DayMap = dynamic(() => import("./components/DayMap"), { ssr: false });
 
 /* ─────────────────────── data ─────────────────────── */
 
@@ -10,6 +14,8 @@ interface TimeSlot {
   desc: string;
   icon: string;
   tip?: string;
+  lat?: number;
+  lng?: number;
 }
 
 interface DayPlan {
@@ -43,6 +49,8 @@ const schedule: DayPlan[] = [
         title: "캄란(나트랑) 공항 도착",
         desc: "베트남 시간 기준 (한국 -2시간)",
         icon: "🛬",
+        lat: 11.9981,
+        lng: 109.2193,
       },
       {
         time: "06:30",
@@ -50,6 +58,8 @@ const schedule: DayPlan[] = [
         desc: "공항에서 리조트까지 약 20분 소요. 얼리체크인 요청 추천",
         icon: "🏨",
         tip: "얼리체크인이 안되면 짐 맡기고 조식부터!",
+        lat: 11.9537,
+        lng: 109.2280,
       },
       {
         time: "08:00",
@@ -87,12 +97,16 @@ const schedule: DayPlan[] = [
         desc: "나트랑 인기 베트남 정통 레스토랑. 분위기 좋은 커플 맛집",
         icon: "🍽️",
         tip: "반미, 쌀국수, 스프링롤 추천!",
+        lat: 12.2464,
+        lng: 109.1960,
       },
       {
         time: "20:30",
         title: "나트랑 야경 산책",
         desc: "쩐푸 거리(Tran Phu St.) 해변도로 산책",
         icon: "🌙",
+        lat: 12.2388,
+        lng: 109.1968,
       },
     ],
   },
@@ -109,6 +123,8 @@ const schedule: DayPlan[] = [
         title: "늦잠 & 조식",
         desc: "여유롭게 일어나서 리조트 조식 즐기기",
         icon: "☀️",
+        lat: 11.9537,
+        lng: 109.2280,
       },
       {
         time: "10:00",
@@ -184,6 +200,8 @@ const schedule: DayPlan[] = [
         title: "남끄엉 사막(Nam Cuong) 도착",
         desc: "일출 전 사막 포인트에서 대기",
         icon: "🏜️",
+        lat: 11.5733,
+        lng: 108.9872,
       },
       {
         time: "05:45",
@@ -216,6 +234,8 @@ const schedule: DayPlan[] = [
         title: "나트랑 시내 탐방",
         desc: "포나가르 참탑, 롱선사 방문",
         icon: "🏛️",
+        lat: 12.2654,
+        lng: 109.1948,
       },
       {
         time: "16:00",
@@ -223,6 +243,8 @@ const schedule: DayPlan[] = [
         desc: "로컬 시장에서 열대과일, 기념품 쇼핑",
         icon: "🛍️",
         tip: "흥정은 필수! 반값부터 시작하세요",
+        lat: 12.2451,
+        lng: 109.1881,
       },
       {
         time: "18:00",
@@ -230,12 +252,16 @@ const schedule: DayPlan[] = [
         desc: "나트랑 전설의 숯불구이 맛집 (1975년 오픈)",
         icon: "🥩",
         tip: "소고기 숯불구이 + 새우 필수 주문!",
+        lat: 12.2453,
+        lng: 109.1921,
       },
       {
         time: "20:00",
         title: "나트랑 나이트마켓",
         desc: "야시장에서 간식, 쇼핑, 분위기 즐기기",
         icon: "🏮",
+        lat: 12.2445,
+        lng: 109.1935,
       },
     ],
   },
@@ -259,6 +285,8 @@ const schedule: DayPlan[] = [
         desc: "4개 섬 호핑투어: 혼문(Hon Mun), 혼못(Hon Mot) 등",
         icon: "⛵",
         tip: "스노쿨링 장비는 투어에 포함! 멀미약 챙기세요",
+        lat: 12.2360,
+        lng: 109.1970,
       },
       {
         time: "10:00",
@@ -278,6 +306,8 @@ const schedule: DayPlan[] = [
         desc: "케이블카 타고 빈펄랜드로! 놀이기구 & 아쿠아리움",
         icon: "🎢",
         tip: "케이블카에서 보는 바다 전경이 최고!",
+        lat: 12.2227,
+        lng: 109.2340,
       },
       {
         time: "17:00",
@@ -291,6 +321,8 @@ const schedule: DayPlan[] = [
         desc: "나트랑 해변 유명 레스토랑 & 바. 라이브 음악과 함께",
         icon: "🍷",
         tip: "해변 테이블 예약 추천! 분위기 최고",
+        lat: 12.2448,
+        lng: 109.1955,
       },
       {
         time: "21:00",
@@ -331,6 +363,8 @@ const schedule: DayPlan[] = [
         title: "점심 - Mix Restaurant",
         desc: "나트랑 인기 그리스/지중해 레스토랑",
         icon: "🥙",
+        lat: 12.2486,
+        lng: 109.1932,
       },
       {
         time: "14:00",
@@ -338,6 +372,8 @@ const schedule: DayPlan[] = [
         desc: "나트랑 센터(Nha Trang Center) 쇼핑몰, 기념품",
         icon: "🛒",
         tip: "베트남 커피(G7), 캐슈넛, 코코넛사탕 추천!",
+        lat: 12.2395,
+        lng: 109.1932,
       },
       {
         time: "16:00",
@@ -352,6 +388,8 @@ const schedule: DayPlan[] = [
         desc: "나트랑 분위기 좋은 베트남식당. 정원이 아름다운 곳",
         icon: "🍽️",
         tip: "반쎄오, 분짜, 씨푸드 추천!",
+        lat: 12.2482,
+        lng: 109.1951,
       },
       {
         time: "20:00",
@@ -364,6 +402,8 @@ const schedule: DayPlan[] = [
         title: "나트랑 출발",
         desc: "캄란공항에서 인천으로! 안녕 나트랑~ 퀸나연과 석곰이 또 올게 👑💕🐻",
         icon: "🛫",
+        lat: 11.9981,
+        lng: 109.2193,
       },
     ],
   },
@@ -729,6 +769,17 @@ function TripOverview() {
 
 function DayCard({ plan }: { plan: DayPlan }) {
   const [open, setOpen] = useState(true);
+  const [showMap, setShowMap] = useState(false);
+
+  const mapLocations: MapLocation[] = plan.slots
+    .filter((slot) => slot.lat !== undefined && slot.lng !== undefined)
+    .map((slot) => ({
+      lat: slot.lat!,
+      lng: slot.lng!,
+      title: slot.title,
+      icon: slot.icon,
+      time: slot.time,
+    }));
 
   return (
     <div className="day-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
@@ -750,6 +801,19 @@ function DayCard({ plan }: { plan: DayPlan }) {
 
       {open && (
         <div className="p-6">
+          {mapLocations.length > 0 && (
+            <div className="mb-4">
+              <button
+                onClick={() => setShowMap(!showMap)}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-600 hover:bg-gray-50 transition-colors cursor-pointer"
+              >
+                <span>🗺️</span>
+                <span>{showMap ? "지도 숨기기" : "지도 보기"}</span>
+              </button>
+              {showMap && <DayMap locations={mapLocations} color={plan.color} />}
+            </div>
+          )}
+
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-rose-200 to-rose-100"></div>
