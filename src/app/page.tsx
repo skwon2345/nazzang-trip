@@ -326,81 +326,45 @@ const schedule: DayPlan[] = [
     day: 4,
     date: "3월 6일",
     weekday: "금요일",
-    theme: "나트랑 탐험",
+    theme: "스노쿨링 & 자유일정",
     themeIcon: "🤿",
     color: "from-emerald-400 to-teal-500",
     slots: [
       {
         time: "07:30",
         title: "조식 & 준비",
-        desc: "호텔 조식 후 나트랑 탐험 준비",
+        desc: "호텔 조식 후 스노쿨링 준비! 수영복 착용",
         icon: "🍳",
       },
       {
         time: "09:00",
-        title: "I-Resort 머드 온천 스파",
-        desc: "천연 광천 머드배스 & 온천수 스파. 커플 머드탕에서 힐링!",
-        icon: "♨️",
-        tip: "커플 머드배스 + 온천풀 + 마사지 패키지 추천!",
-        lat: 12.2780,
-        lng: 109.1730,
-      },
-      {
-        time: "11:30",
-        title: "허벌배스 & 미네랄풀",
-        desc: "머드배스 후 허브탕, 미네랄풀, 자쿠지에서 릴랙스",
-        icon: "🧖",
-      },
-      {
-        time: "12:30",
-        title: "점심 - Yen's Restaurant",
-        desc: "아름다운 정원에서 즐기는 베트남 요리. 커플 분위기 최고",
-        icon: "🌿",
-        tip: "반쎄오, 분짜, 타이거새우 추천!",
-        lat: 12.2482,
-        lng: 109.1951,
-      },
-      {
-        time: "14:30",
-        title: "감성카페 투어",
-        desc: "La Fenêtre Soleil - 프렌치 콜로니얼 감성카페. 인테리어가 예술!",
-        icon: "☕",
-        tip: "에그커피, 솔트커피 꼭 맛보세요!",
-        lat: 12.2460,
-        lng: 109.1920,
-      },
-      {
-        time: "16:00",
-        title: "커플 마사지",
-        desc: "시내 스파에서 베트남식 커플 마사지로 여행 피로 풀기",
-        icon: "💆",
-        tip: "Su Spa, Galina Spa 추천. 1시간 약 200,000 VND",
-      },
-      {
-        time: "17:30",
-        title: "선셋 크루즈",
-        desc: "나트랑만 위에서 석양을 바라보며 와인 한 잔. 로맨틱 그 자체!",
-        icon: "🚢",
-        tip: "Klook/KKday에서 사전 예약. 약 1시간 30분 코스",
+        title: "스노쿨링 투어 출발",
+        desc: "나트랑 항구에서 보트 출발. 혼문(Hon Mun) 섬으로!",
+        icon: "⛵",
+        tip: "스노쿨링 장비 투어 포함! 멀미약 챙기세요",
         lat: 12.2360,
         lng: 109.1970,
       },
       {
-        time: "19:30",
-        title: "저녁 - Louisiane Brewhouse",
-        desc: "해변 위 브루어리. 수제맥주와 씨푸드, 프라이빗 풀까지!",
-        icon: "🍺",
-        tip: "비치 테이블에서 파도소리 들으며 디너!",
-        lat: 12.2395,
-        lng: 109.1965,
+        time: "10:00",
+        title: "혼문 섬 스노쿨링",
+        desc: "산호초 위에서 스노쿨링! 니모와 열대어를 찾아보세요",
+        icon: "🐠",
+        tip: "수중카메라/고프로 필수! 방수팩도 챙기세요",
+        lat: 12.1700,
+        lng: 109.2700,
       },
       {
-        time: "21:30",
-        title: "해변 바에서 마무리",
-        desc: "쩐푸 해변도로 산책 후 루프탑 바에서 칵테일",
-        icon: "🍸",
-        lat: 12.2388,
-        lng: 109.1968,
+        time: "12:00",
+        title: "섬 위에서 해산물 점심",
+        desc: "해산물 BBQ 점심 (투어 포함)",
+        icon: "🦐",
+      },
+      {
+        time: "14:00",
+        title: "복귀 & 자유시간",
+        desc: "투어 끝! 이후 자유일정 - 아래 '할만한 것들'에서 골라보세요",
+        icon: "🎯",
       },
     ],
   },
@@ -615,6 +579,66 @@ const places: Place[] = [
   },
 ];
 
+interface Activity {
+  name: string;
+  desc: string;
+  icon: string;
+  price: string;
+  duration: string;
+  tip?: string;
+}
+
+const activities: Activity[] = [
+  {
+    name: "베트남 쿠킹클래스",
+    desc: "현지 셰프에게 베트남 요리를 배워보세요! 시장 투어 + 요리 실습",
+    icon: "👨‍🍳",
+    price: "약 $25~35/인",
+    duration: "3~4시간",
+    tip: "Lanterns, Khanh's Kitchen 쿠킹클래스 추천. 오전 타임 예약!",
+  },
+  {
+    name: "I-Resort 머드 온천 스파",
+    desc: "천연 광천 머드배스 & 온천수 스파. 커플 머드탕에서 힐링!",
+    icon: "♨️",
+    price: "약 300,000~500,000 VND/인",
+    duration: "2~3시간",
+    tip: "커플 머드배스 + 온천풀 + 마사지 패키지가 가성비 최고",
+  },
+  {
+    name: "스쿠터(오토바이) 체험",
+    desc: "나트랑 시내 & 해안도로를 스쿠터로 달리기! 자유로운 탐험",
+    icon: "🛵",
+    price: "약 150,000~200,000 VND/일",
+    duration: "반나절~하루",
+    tip: "국제운전면허증 필수! 헬멧 착용, 안전 운전",
+  },
+  {
+    name: "선셋 크루즈",
+    desc: "나트랑만 위에서 석양을 바라보며 와인 한 잔. 로맨틱 그 자체!",
+    icon: "🚢",
+    price: "약 $20~40/인",
+    duration: "1시간 30분",
+    tip: "Klook/KKday에서 사전 예약",
+  },
+  {
+    name: "커플 마사지",
+    desc: "베트남식 커플 마사지로 여행 피로 풀기",
+    icon: "💆",
+    price: "약 200,000~400,000 VND/인",
+    duration: "1~2시간",
+    tip: "Su Spa, Galina Spa 추천",
+  },
+  {
+    name: "포나가르 참탑 & 롱선사",
+    desc: "8세기 참파 왕국 사원 + 거대한 흰색 불상. 나트랑의 역사 탐방",
+    icon: "🏛️",
+    price: "입장료 약 22,000 VND",
+    duration: "2~3시간",
+    tip: "사원 방문 시 긴 옷 착용!",
+  },
+];
+
 interface PackingItem {
   category: string;
   items: string[];
@@ -660,8 +684,8 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
     { label: "일정", href: "#schedule" },
+    { label: "할만한 것들", href: "#activities" },
     { label: "맛집", href: "#restaurants" },
-    { label: "관광지", href: "#places" },
     { label: "준비물", href: "#packing" },
   ];
 
@@ -941,6 +965,113 @@ function Schedule() {
   );
 }
 
+function Activities() {
+  return (
+    <section id="activities" className="py-20 px-4 bg-gradient-to-b from-rose-50/30 to-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">🎯 할만한 것들</h2>
+          <div className="section-divider mb-4"></div>
+          <p className="text-gray-500">Day 4~5 자유시간에 골라서 하기! 그때 기분에 따라 결정 👑🐻</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          {activities.map((a) => (
+            <div
+              key={a.name}
+              className="bg-white rounded-2xl p-5 border border-emerald-100 hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-3xl flex-none">{a.icon}</div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-800">{a.name}</h3>
+                  <p className="text-sm text-gray-500 mt-1">{a.desc}</p>
+                  <div className="flex items-center gap-4 mt-3 text-xs text-gray-400">
+                    <span>💰 {a.price}</span>
+                    <span>⏱️ {a.duration}</span>
+                  </div>
+                  {a.tip && (
+                    <div className="mt-2 text-xs text-amber-600 bg-amber-50 px-3 py-1.5 rounded-lg">
+                      💡 {a.tip}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TravelPledge() {
+  const pledges = [
+    "사소한 것에 짜증내지 않기. 길을 잘못 들어도 그게 우리만의 모험!",
+    "상대방이 고르는 메뉴에 불만 없기. 뭘 먹든 같이 먹으면 맛있으니까!",
+    "사진 찍어달라고 할 때 귀찮아하지 않기. 100장이든 200장이든!",
+    "피곤할 때는 솔직하게 말하기. 참다가 폭발하지 말기!",
+    "화가 나면 10초 심호흡 후, 바다를 보며 '나 지금 나트랑에 있다'를 되뇌기",
+    "하루에 최소 3번은 '사랑해' 말하기",
+    "서로의 페이스에 맞추기. 쉬고 싶으면 쉬고, 놀고 싶으면 놀기!",
+    "여행이 끝나면 '다음에 또 가자'로 마무리하기",
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-gradient-to-b from-white to-pink-50/30">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">💕 우리의 여행 선서문</h2>
+          <div className="section-divider mb-4"></div>
+          <p className="text-gray-500">퀸나연과 석곰이, 행복한 여행을 위해 약속해요!</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border border-rose-200 shadow-sm">
+          <div className="text-center mb-6">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <span className="text-3xl">👑</span>
+              <span className="text-2xl text-rose-400">x</span>
+              <span className="text-3xl">🐻</span>
+            </div>
+            <p className="text-sm text-rose-400 font-medium">
+              우리는 이 여행에서 절대 싸우지 않겠습니다
+            </p>
+            <p className="text-xs text-gray-400 mt-1">
+              (만약 싸우면... 화해 비용으로 스파 한번 더!)
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {pledges.map((pledge, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="flex-none w-7 h-7 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                  {i + 1}
+                </div>
+                <p className="text-sm text-gray-700 pt-1">{pledge}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-rose-200 text-center">
+            <p className="text-sm text-gray-500 mb-4">위 사항을 성실히 이행할 것을 선서합니다</p>
+            <div className="flex items-center justify-center gap-8">
+              <div className="text-center">
+                <p className="text-xs text-gray-400 mb-1">서명</p>
+                <p className="text-lg font-bold text-rose-500 italic">퀸나연 👑</p>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-gray-400 mb-1">서명</p>
+                <p className="text-lg font-bold text-amber-600 italic">석곰이 🐻</p>
+              </div>
+            </div>
+            <p className="text-xs text-gray-300 mt-4">2026년 3월 3일 나트랑에서</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Restaurants() {
   return (
     <section id="restaurants" className="py-20 px-4 bg-white">
@@ -1166,6 +1297,8 @@ export default function Home() {
       <Hero />
       <TripOverview />
       <Schedule />
+      <Activities />
+      <TravelPledge />
       <Restaurants />
       <Places />
       <Packing />
