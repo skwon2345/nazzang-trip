@@ -32,7 +32,7 @@ const schedule: DayPlan[] = [
   {
     day: 1,
     date: "3월 3일",
-    weekday: "월요일",
+    weekday: "화요일",
     theme: "출발 & 도착",
     themeIcon: "✈️",
     color: "from-rose-400 to-pink-500",
@@ -113,7 +113,7 @@ const schedule: DayPlan[] = [
   {
     day: 2,
     date: "3월 4일",
-    weekday: "화요일",
+    weekday: "수요일",
     theme: "나트랑 시내 맛집 투어",
     themeIcon: "🍜",
     color: "from-cyan-400 to-blue-500",
@@ -228,7 +228,7 @@ const schedule: DayPlan[] = [
   {
     day: 3,
     date: "3월 5일",
-    weekday: "수요일",
+    weekday: "목요일",
     theme: "판랑 사막 일출",
     themeIcon: "🏜️",
     color: "from-amber-400 to-orange-500",
@@ -320,7 +320,7 @@ const schedule: DayPlan[] = [
   {
     day: 4,
     date: "3월 6일",
-    weekday: "목요일",
+    weekday: "금요일",
     theme: "나트랑 탐험",
     themeIcon: "🤿",
     color: "from-emerald-400 to-teal-500",
@@ -387,7 +387,7 @@ const schedule: DayPlan[] = [
   {
     day: 5,
     date: "3월 7일",
-    weekday: "금요일",
+    weekday: "토요일",
     theme: "마지막 날 & 귀국",
     themeIcon: "💕",
     color: "from-violet-400 to-purple-500",
@@ -728,7 +728,7 @@ function Hero() {
             </div>
           </div>
 
-          <p className="text-rose-400 text-lg mb-2 font-medium">2025. 03. 03 — 03. 07</p>
+          <p className="text-rose-400 text-lg mb-2 font-medium">2026. 03. 03 — 03. 07</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             <span className="gradient-text">나트랑</span>
           </h1>
@@ -1120,7 +1120,7 @@ function Footer() {
         </div>
         <h3 className="text-2xl font-bold mb-2">퀸나연 & 석곰이의 나트랑 여행</h3>
         <p className="text-rose-100 mb-2">나연이와 석권이의 달콤한 모험</p>
-        <p className="text-rose-200 text-sm mb-6">2025. 03. 03 — 03. 07</p>
+        <p className="text-rose-200 text-sm mb-6">2026. 03. 03 — 03. 07</p>
         <div className="flex items-center justify-center gap-3 mb-6">
           <span className="h-px w-20 bg-rose-300"></span>
           <span className="text-lg">👑 ✈️ 🏖️ 🌅 🏜️ 🧸</span>
